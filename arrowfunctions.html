@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <script>
+        //the simplest way to create a function is called arrow function 
+        //variabletype functionName = (arg1, arg2, ..., argN) => expression; 
+        // let func=function(arg1,arg2,..., argN){
+        //     return;
+        // }
+
+        let sum = (a, b) => a + b;
+        alert(sum(1, 2));
+
+        let double = n => n * 2;
+        alert(double(3));
+
+        //in case of there is no arguments then parantheses still appears
+        let sayHi = () => alert("Hello");
+        sayHi();
+
+        //dynamically created function 
+
+        let age = prompt("What is your age:");
+        let welcome = (age < 18) ? () => alert("Hello") :
+            () => alert("Greetings!");
+        welcome();
+
+        let additionFunction = (a, b) => {
+            let result = a * b;
+            return result;
+        };
+        alert(additionFunction(9, 8));
+
+        //task 
+        // let askFunction = prompt("Do you agree?");
+        // let ask = (askFunction(question,yes,no)) ? () => alert("You agreed."):
+        // () => alert("You canceled the execution.");
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+        }
+
+        ask(
+            "Do you agree?",
+            () => alert("You agreed."),
+            () => alert("You canceled the execution.")
+        );
+
+    </script>
+</body>
+
+</html>

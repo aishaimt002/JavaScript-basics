@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JS</title>
+</head>
+<body>
+    <script>
+        //creating an empty array 
+        let arr = new Array(); 
+        let myArr = []; 
+
+        let fruits = ["Apple", "Organe", "banana"];
+        alert(fruits[0]); //apple
+        alert(fruits[1]); //orange
+        alert(fruits[2]);//plum
+
+        fruits[2] = "Pear";
+        alert(fruits[2]);
+        //can find the total length of the arrau 
+        alert(fruits.length); //3
+
+        let ArrayElements = ['Apple', {name: 'John'}, true, function() {alert('hello');}];
+        alert(ArrayElements[0]);
+        alert(ArrayElements[1].name);
+        ArrayElements[3](); //function call
+
+        //-1 will not work in js 
+        let Names = ["Ayesha", "Imtiaz", "Robina", "Shaheen"];
+        alert(Names.length-1);
+        alert(Names[Names.length-1]);
+
+        //method pop, push, shift and unshift
+        //extract the last element and return it 
+        let FamilyMember = ["Imtiaz", "Alexandria Christopher", "Muqaddas", "Robina"];
+        alert(FamilyMember.pop());
+        alert(FamilyMember);
+        FamilyMember.push("Ayesha");
+        alert(FamilyMember);
+
+        //methods that work in the beginning is shift and unshift 
+        alert(FamilyMember.shift()); //remove the first element from the beginning 
+        alert(FamilyMember);
+        //unshift: add the element in the start 
+        FamilyMember.unshift("Imtiaz");
+        alert(FamilyMember);
+
+        //push & unshift can add the multiple elements at once
+        FamilyMember.push("John Smith", "Chris Janeway");
+        FamilyMember.unshift("Bob Saget");
+        alert(FamilyMember);
+
+        //internals 
+        let NewArray = ['Banana'];
+        let newArr = NewArray;
+        alert(newArr === NewArray);
+        newArr.push("Pear");
+        alert(newArr);
+
+        //loops
+        //for loop
+        let forLoop = ["Class1", "Class2", "Class3", "Class4"];
+        for(let i=0; i<forLoop.length; i++){
+            alert(forLoop[i]);
+        }
+
+        //for of loop
+        let degrees = ["Software Engineering", "Computer Science", "Electrical Engineering"];
+        for(let degree of degrees){
+            alert(degree);
+        }
+
+        //for in loop 
+        let softwareHouses = ["Microsft", "Google", "Amazon", "Contour"];
+        for(let key in softwareHouses){
+            alert(softwareHouses[key]);
+        }
+
+        //New array()
+        //let arr = new Array("Apple", "Mango", "Banana");
+
+        //Multidimensional arrays 
+        let matrix = [
+            [1,2,3], [4,5,6], [7,8,9]
+        ];
+        alert(matrix[0,1]);
+
+        //tostring: used to returns a comma separated list of elements 
+        let toStringArray = [1,2,3];
+        alert(toStringArray); //1,2,3
+        alert( String(toStringArray) === '1,2,3');
+
+        alert( [] + 1); 
+        alert([1] + 1);
+        alert([1,2] + 1);
+
+        alert("" + 1);
+        alert("1" + 1);
+        alert("1,2" + 1); 
+
+
+        //tasks 
+        
+    </script>
+</body>
+</html>

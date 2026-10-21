@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Objects</title>
+</head>
+
+<body>
+
+    <script>
+        //objects contain properties & behaviours 
+        const student = {
+            fullName: "Ayesha Imtiaz",
+            marks: 94.4,
+            printMarks: function () {
+                console.log("marks =", this.marks); //student.marks 
+            }
+        }
+
+        const employee = {
+            calculateTax() {
+                console.log("Tax rate is 10%");
+            }
+        }
+
+        const karanArjun1 = {
+            salary: 50000,
+        };
+        const karanArjun2 = {
+            salary: 60000
+        }
+        //set a prototype -> reference to an object
+        //__proto__
+        karanArjun1.__proto__ = employee;
+        karanArjun2.__proto__ = employee;
+
+        //if there is a conflict between the object & prototype then object will win
+        //if object & prototype have same value then object will override the prototype data
+
+        //classes is a program code template for creating objects.
+        //those objects will have some state(variables) & some behaviour (functions) inside it
+
+        //classes in js is a blue print
+        //    class MyClass{
+        //     constructor(){}
+
+        //     method{
+
+        //     }
+
+        //    } 
+
+        class ToyotaCar { //class
+            constructor(kilometer){
+                console.log("Constructor is called");
+                this.kilometer = kilometer;
+            }
+
+            start(){ //methods 
+                console.log("start");
+            }
+            stop(){
+                console.log("stop");
+            }
+            continue(){
+                console.log("continue car");
+            }
+            setBrand(brand){
+                this.brandName = brand; //setbrand.brand
+            }
+            setcolor(color){
+                this.carColor = color;
+            }
+        }
+
+        let fortuner = new ToyotaCar(10); //object will use the class toyota car 
+        fortuner.setBrand("fortuner");
+        fortuner.setcolor("black");
+        console.log(fortuner.kilometer);
+
+        //constructor()
+        //automatically invoked by new object 
+
+        //inheritance in JS
+        //it is passing down properties & methods from parent class to child class 
+        // class parent{
+
+        // }
+        // class child extends parent{
+
+        // }
+
+        //If child & parent have same method, child's method will be used. Method overriding 
+        class Parent{
+            constructor(){
+                console.log("Enter parent constructor");
+                console.log("parent constructor is called");
+                console.log("Exists the parent constructor");
+            }
+            hello(){
+                console.log("hello");
+            }
+        }
+
+        class child extends Parent{
+            constructor(){
+                console.log("Enter child constructor");
+                super(); //call the parent call constructor 
+                console.log("Child constructor is called");
+                console.log("exists the child constructor");
+            }
+            bye(){
+              console.log("Bye bye");
+            }
+        }
+
+        let object = new child();
+
+        //super keyword is used to call the constructor of parent class becuase child class also have the constructor
+        //if we don't use the super keyword then the error appear 
+
+
+
+        
+
+
+    </script>
+</body>
+
+</html>

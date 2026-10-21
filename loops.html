@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+
+    <script>
+        //while loop 
+        //initilization, stopping condition define, print the value, increment/decrement 
+        let i = 0;  //initilization
+        while(i < 5 ){ //condition 
+            //0 < 5 -> true, 1 < 5 -> true, 2 < 5 -> true, 3 < 5 -> true, 4 < 5 -> true, 5 < 5 -> false - then condition fails 
+            alert("The value of i is: " + i);
+            i++; //incrment
+        }
+
+        let j = 5;
+        while(j){ 
+            alert(j);
+            j--;
+        }
+
+        //do while loop 
+        //initilization, printing the vakue, increment/decrement, stopping condition
+        let k = 0;
+        do{
+            alert(k);
+            k++;
+        }
+        while(k < 10);
+
+        //for loop 
+        for(let p = 0; p < 10; p++){ //initilization, stopping condition, increment/decrement
+            alert(p);
+        }
+
+        //break statment 
+        let sum = 0;
+        while(true){ //always true 
+            let value = prompt("Enter a number :");
+            if(!value){
+                break;
+            }
+            sum = sum + value;
+        }
+        alert(sum);
+
+        //continue 
+        for(let i=0; i<10; i++){
+            if(i % 2 == 0){
+                continue;
+            }
+            alert(i);
+        }
+
+        //task 
+        let valuegreater; 
+        do{
+            valuegreater = prompt("Enter a number greater than 100: ");
+        }
+        while(valuegreater <+ 100 && valuegreater !== null && valuegreater !== "");
+
+
+        //prime no 
+        let n = 15;
+        let isPrime = true;
+        for(let i = 2; i< n; i++){
+             if(n % i == 0){
+                isPrime = false;
+             }
+        }
+        alert(isPrime);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types in JS</title>
+</head>
+
+<body>
+    <script>
+        //data types 
+        //numbers -> it represent the both number and floating values 
+        let n = 123;
+        n = 12.34567;
+
+        //bigInt is used to present the value larger than or less than (253-1) & -(253-1)
+        console.log(9007199254740991 + 1);
+        console.log(9007199254740991 + 2);
+        //Bigint value is created by appending the n value at the end of the integer 
+        const bigInt = 1234567890123456789012345678901234567890n;
+        console.log(bigInt);
+
+        //string in javascript must be surrounded by quotes 
+        let str = "Hello"; //double quote 
+        let str2 = 'Single quotes are ok too'; //single quote
+        let phrase = `can embed another ${str}`; //`hello`
+
+        let name = 'John';
+        alert(`Hello, ${name}!`);
+        alert(`The result is ${1 + 2}`);
+
+        //boolean 
+        let namefieldChecked = true;
+        let agefieldChecked = false;
+
+        // let name = "Ilya";
+
+        // // the expression is a number 1
+        // alert(`hello ${1}`); // hello 1
+
+        // // the expression is a string "name"
+        // alert(`hello ${"name"}`); // hello name
+
+        // // the expression is a variable, embed it
+        // alert(`hello ${name}`); // hello Ilya
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+    <script>
+        //Splice : insert, remove and replace elements
+        let arr = ["I", "go", "home"];
+        //delete arr[1];
+        alert(arr);
+
+        arr.splice(1,1,);
+        alert(arr);
+
+        let Array = ["I", "study", "Javascript"];
+        Array.splice(1,1);
+        alert(Array);
+
+        //start from 0 and delete 3
+        let SpliceArray = ["I", "study", "Javascript", "right", "now"];
+        SpliceArray.splice(0,3, "Let's", "dance");
+        alert(SpliceArray);
+
+        let removed = SpliceArray.splice(0,2);
+        alert(removed);
+
+        //at specific position and delete 0 
+        let newArray = ["I", "study", "Javascript"];
+        newArray.splice(2,0,"complex", "language");
+        alert(newArray);
+
+        //slice: returns a new array copying to it all items from index start to end 
+        let newArr = ["t","e","s","t"];
+        alert(newArr.slice(1,3)); //didn't include the last element 
+
+        //concat
+        //add the values in the array 
+        let concatArray = [1,2];
+        alert(concatArray.concat([3,4])); //1,2,3,4
+        alert(concatArray.concat([33,44],[6,7]));
+        alert(concatArray.concat([13,14], 11,12));
+
+        let arrayNumber = [1,2];
+        let arrayLike = {
+            0: "Something",
+            length: 1
+        };
+        alert(arrayNumber.concat(arrayLike));
+
+        //for each: allow to run the function for every elements of array 
+        ["Ayesha", "Imtiaz","Muqaddas"].forEach((item, index, array) => {
+            alert(`${item} is at index ${index} in ${array}`);
+            alert(`${array}`);
+        });
+
+        //searching in array 
+        let searchArray = [1,0, false]; 
+        alert(searchArray.indexOf(0));
+        alert(searchArray.indexOf(1));
+        alert(searchArray.lastIndexOf(false));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 20 Questions</title>
+</head>
+
+<body>
+    <script>
+        //Question 01
+        // Variables and Data Types: Create variables for a customer's name, age,
+        //  account balance, and whether their account is active. Display each variable 
+        //  and its data type in the console.
+
+        let customerName = "Ayesha Imtiaz";
+        let Age = 22;
+        let accountBalance = 80000;
+        let accountStatus = true;
+        console.log("Customer Name is: ", customerName);
+        console.log("Customer Current Age is :", Age);
+        console.log("AccountBalance is :", accountBalance);
+        console.log("Customer Account status is :", accountStatus);
+
+        //Question 02
+        // Operators: Write a program that takes the prices of three products, 
+        // calculates their total price, applies a 10% discount, and displays the final
+        // amount.
+        let prices = [120, 100, 23];
+        let sum = 0;
+        for (let i = 0; i < prices.length; i++) {
+            sum = sum + prices[i];
+        }
+        console.log("The sum of all products :", sum);
+        let discount = sum * (1 - 0.10);
+        console.log("Discount price is: ", discount);
+
+        //Question 03 
+        // Write a program that checks a student's marks. Display "Excellent" for marks 
+        // of 90 or above, "Good" for marks from 70 to 89, "Pass" for marks from 50 to 69,
+        // and "Fail" for marks below 50.
+        let studentMarks = prompt("Enter your marks");
+        if (studentMarks >= 90) {
+            console.log("Excellent");
+        }
+        else if (studentMarks >= 70 && studentMarks <= 89) {
+            console.log("Pass");
+        }
+        else if (studentMarks >= 50 && studentMarks <= 69) {
+            console.log("Fail");
+        }
+        else {
+            console.log("fail");
+        }
+
+        //Question 04
+        // Create a program that takes a number from 1 to 7 and displays the 
+        // corresponding day of the week. Display an appropriate message for an
+        // invalid number.
+        // let input = []; //empty
+        // for(let i=0; i>=0 && i<=7; i++){
+        //     let value = prompt("Enter the week number between 1 & 7");
+        // }
+
+        let taskInput = Number(prompt("Enter the week number between 1 & 7:"));
+        // if(taskInput == null || taskInput == ""){
+        //     prompt("Enter the valid Number: between 1 & 7");
+        // }
+        switch (taskInput) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break;
+            default:
+                console.log("Enter the valid number");
+        }
+
+        //Question 05
+        // Loops: Write a program that prints all numbers from 1 to 100 and 
+        // calculates the sum of all even numbers in that range.
+
+        let totalSum = 0;
+        for (let i = 1; i <= 100; i++) {
+            console.log(i);
+            if (i % 2 == 0) {
+                totalSum = totalSum + i;
+            }
+        }
+        console.log("All even number sum : ", totalSum);
+
+        //Question 06
+        // Create an array of 10 numbers. Find and display the largest number, smallest 
+        // number, and average of all the numbers without using built-in methods to 
+        // calculate the maximum or minimum.
+
+        let arr = [41, 58, 20, 32, 77, 88, 10, 45, 23, 11];
+        let totalValues = 10;
+        let smallestValue = arr[0];
+        let largestValue = arr[0];
+        let newSum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            newSum = newSum + arr[i];
+            if (arr[i] > largestValue) {
+                largestValue = arr[i];
+                arr[i]++;
+            }
+            if (arr[i] < smallestValue) {
+                smallestValue = arr[i];
+                arr[i]++;
+            }
+        }
+        console.log("Largest:", largestValue);
+        console.log("Smallestvalue", smallestValue);
+        //sum of all numbers and divide by the total number
+        console.log("Sum is :", newSum);
+        let average = newSum / 10;
+        console.log("The average of all numbers :", average);
+
+        //Question 07
+        // Given the array [12, 5, 8, 21, 3, 16, 10], create a new array 
+        // containing only numbers greater than 10, multiply each of those numbers 
+        // by 2, and display the resulting array.
+
+        let InputArray = [12, 5, 8, 21, 3, 16, 10];
+
+        let NewArray = InputArray.filter((item) => {
+            return item > 10;
+        });
+        console.log(NewArray); //12, 21, 16
+        let multipledArray = [];
+        for (let i = 0; i < NewArray.length; i++) {
+            NewArray[i] = NewArray[i] * 2;
+            console.log("Multipled values:" + NewArray[i]);
+            multipledArray.push(NewArray[i]);
+        }
+        console.log("The resulting value is:", multipledArray);
+
+        //Question: 08
+        // Strings: Write a function countVowels(str) that counts the vowels
+        // (a, e, i, o, u) in a string, regardless of uppercase or lowercase 
+        // letters.
+        function countVowels(str) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' ||
+                    str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' ||
+                    str[i] == 'U') {
+                    count++;
+                    console.log("Vowels values are :", str[i]);
+                }
+            }
+            console.log("The count value is:", count);
+        }
+        countVowels("I am learning");
+
+        //Question 09
+        // Write a function capitalizeWords(str) that capitalizes the first 
+        // character of every word in a sentence. For example, "hello javascript world" 
+        // should become "Hello Javascript World".
+
+        function capitalizeWords(str) {
+            if (!str) {
+                return str;
+            }
+            let words = str.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                let result;
+                result = words[i][0].toUpperCase() + words[i].slice(1);
+                console.log(result);
+            }
+        }
+        capitalizeWords("hello javascript world");
+
+        //Question 10 
+        //  Write a program that checks whether a customer is eligible for a discount.
+        //  The customer must either be a premium member or have a purchase amount
+        //   greater than or equal to $500, but their account must also be active.
+
+        let userName = prompt("Enter your name to check the eligibility criteria of discount :");
+        let accountActive = true;
+        let purchasedAmount = Number(prompt("Enter the purchased amount"));
+        let premiumMember = true;
+        if ((premiumMember == true || (purchasedAmount >= 500)) && (accountActive == true)) {
+            console.log(`${userName} is eligible for 25% discount on new arrivals`);
+        }
+        else {
+            console.log(`${userName} is not eligible for 25% discount on new arrivals`)
+        }
+
+        //Question 11
+        // Write a function removeDuplicates(arr) that returns a new array containing
+        // only unique values, without modifying the original array.
+
+        function removeDuplicate(arr) {
+            let duplicateArray = [];
+            for (let i = 0; i < arr.length; i++) {
+                let count = 0;
+                for (let j = 0; j < arr.length; j++) {
+                    if (arr[i] === arr[j]) {
+                        count++;
+                    }
+                }
+                if (count > 1 && !duplicateArray.includes(arr[i])) {
+                    duplicateArray.push(arr[i]);
+                }
+            }
+            console.log("Duplicate elements are:", duplicateArray);
+        }
+
+        removeDuplicate([12, 8, 7, 6, 5, 4, 12, 4]);
+
+    </script>
+</body>
+
+</html>

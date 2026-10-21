@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //allow to call the code many times without repetition 
+        //function declaration 
+        //function(keyword) functionName(parameter1, parameter2 ...parameterN){
+        //body }
+
+        //functioncall 
+        //nameoffunction 
+
+        // function showMessage(){
+        //     alert("Hello everyone");
+        // }
+        // showMessage();
+
+        // //local variable 
+        // //a variable declared inside a function is only visible inside that function
+        // function myMessage(){
+        //     let message = "Hello, i am learning JS";
+        //     alert(message);
+        // }
+        // myMessage(); //hello i am learning JS
+        // alert(message); //error 
+
+
+        // // "use strict"
+        // //outer variable - global declaration 
+        // let userName = "John";
+        // function callName() {
+        //     userName = "Bob";
+        //     let myownMessage = "Hello" + userName;
+        //     alert(myownMessage);
+        // }
+        // // alert( userName );//john
+        // callName();
+        // alert( userName ); //bob
+
+        //global variables: Declare outside the function while global variables are visible 
+        //from any function 
+
+        //parameters
+        function myOwnParameter(parameter1, parameter2) {
+            parameter1 = "Ann";
+            parameter2 = "Hello";
+
+            parameter1 = "*" + parameter1 + "*";
+            alert(parameter1 + ":" + parameter2);
+            parameter1 = "Ayesha";
+            alert(parameter1 + ":" + parameter2);
+
+        }
+        myOwnParameter();
+        //if we don't declare the value of a parameter then it will be undefined 
+
+        //alternative default parameters
+        function showParamters(text) {
+            //code
+            if (text === undefined) {
+                text = "empty message";
+            }
+            alert(text);
+        }
+        showParamters();
+
+        //returing a value 
+        function sum(a, b) {
+            return a + b;
+        }
+        let result = sum(1, 2);
+        alert(result);
+
+        function checkAge(age) {
+            if (age >= 18) {
+                alert("You can vote");
+            }
+            else {
+                alert("You cannot vote");
+            }
+        }
+        let findAge = prompt("How old are you");
+        if (checkAge(findAge)) {
+            alert("Access granted");
+        }
+        else {
+            alert("Access denied");
+        }
+
+        //task 
+      function VoteAge(age){
+        return (age > 18 || confirm('Did parents allow you'));
+      }
+      function Voteagain(age){
+        return (age > 18) ? true: confirm('Did paremts allow you');
+      }
+
+      function minimum(x,y){
+        if(x > y){
+            alert(x + "is greater");
+        }
+        else{
+            alert(y + "is greater");
+        }
+      }
+      let resultMinimum = minimum(9,8);
+      alert(resultMinimum);
+
+      function power(x,n){
+        //power always start with from 1 
+        let result = 1;
+        for(let i=0; i<n; i++){ //i = 0, i<2 -> true 3 * 1 -> 3, i=1, 1< 2 -> true, 3 * 3 -> 9, i=2, 2 < 2 
+            result = result * x;
+        }
+        return result;
+      }
+      alert(pow(3,2));  
+    
+
+     
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Type Conversions in JS</Title>
+    </head>
+
+<body>
+    
+    <!-- String conversion -->
+     <script>
+        let value = true;
+        alert("The type of value(true) is : "+ typeof value); //boolean
+
+        value = String(value); //now the boolean true value is converted to string value 
+        alert("The type of string value is: " + typeof value); //string 
+
+        // number conversion
+        let age = "123"; //string 
+        alert("The type of age is:" + typeof age);
+
+        age = Number(age); //now it's a number 
+        alert("The type of age is:" + typeof age); //number
+
+        let myage = Number("The string is a arbitary value");
+        alert(myage); //NaN
+
+        alert( Number ("    1234     "));
+        alert(Number( "123z "));
+        alert(Number(true));
+        alert(Number(false));
+
+        //boolean conversion 
+        alert(Boolean(1));
+        alert(Boolean(0));
+        alert(Boolean("hello"));
+        alert(Boolean(""));
+
+
+
+
+     </script>
+</body>
+</html>

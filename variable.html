@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in JS</title>
+</head>
+<body>
+    
+    <!-- //A varaible is used to store the value inside the container  -->
+    <script>
+        //let
+        let message;
+        message = "hello";
+        alert(message);
+
+        //the variable name should start from the _, $, letters only, digit only or symbols
+        //the first character must be a digit 
+        let userName;
+        let test123; 
+        let $ = 1;
+        let _ = 2;
+        alert($ + _ ); //3
+
+        //the variable name APPLE, apple is not the same 
+        //Reserved names -> which cannot be used as varaible names because they are used by the language itself. 
+
+        //constants 
+        const myBirthday = '18.04.1982';
+        //const variables cannot be reassigned. An attempt to do so will through an error
+
+        //uppercase 
+        const COLOR_RED = "#F00";
+        const COLOR_GREEN = "#0F0";
+        let color = COLOR_RED;
+        alert(color);
+
+        //task 
+        let admin;
+        let name;
+        name = 'John';
+        admin = name; 
+        alert(admin);
+        alert(name);
+
+        //02 
+        let planet = "Earth"; 
+        let visitor = "Ayesha";
+        alert(planet);
+        alert(visitor);
+    </script>
+</body>
+</html>
